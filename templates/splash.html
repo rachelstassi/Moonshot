@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<title>Welcome</title>
+	<meta name="description" content="Welcome Page">
+	<meta name="author" content="Rachel Stassi">
+	
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Font -->
+	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="/static/css/normalize.css">
+	<link rel="stylesheet" href="/static/css/skeleton.css">
+	
+	<!-- Favicon
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="icon" type="image/png" href="/static/favicon.png">
+	
+</head>
+<body>
+	
+<div>
+	<!-- Flashed messages before content -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class="flashesList">
+            {% for message in messages %}
+            <li class="flashes">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+</div>
+	
+<!-- Primary Page Layout -->
+<div class ="splashBackground">
+	<div class="outer">
+		<div class="middle">
+			<div class="container" style="max-width: 90%">
+				<div class="one-third column" id="splash-left">
+					<h4>Welcome to</h4>
+					<h3>Moonshot Team Builder!</h3>
+					<hr>
+					<h6>
+						Made for CIS 422: Software Methodology
+					</h6>
+					
+					<form action="/signup" style="display:inline-block; margin-top:1rem; margin-right:10%; width:42.5%">
+						<button class="button" id="signup">Sign Up</button>
+					</form>
+					
+					<form action="/login" style="display:inline-block; width:42.5%">
+						<button class="button-primary" id="login" type="submit">Login</button>
+					</form>
+				</div>
+				
+				<div class="one-third column" id="splash-right">
+					<h5 align="right">Developers of Moonshot</h5>
+					<hr>
+					<li>
+						Rachel Stassi, Lead Developer
+						<br>
+						Front-End/Back-End Service
+						<br>
+						<a href="mailto:jsmith22@uoregon.edu?">
+							rachelestassi@gmail.com
+						</a>
+					</li>
+				</div>
+			</div> <!-- End Container -->
+		</div>
+	</div>
+</div> <!-- End Document -->
+	
+</body>
+</html>
